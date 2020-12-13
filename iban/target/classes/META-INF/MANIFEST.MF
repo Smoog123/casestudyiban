@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
 Built-By: sebas_mbpb8hn
 Build-Jdk: 14.0.1
+Implementation-Title: iban
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: de.stroer
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/iban/
 Created-By: Maven Integration for Eclipse
 
