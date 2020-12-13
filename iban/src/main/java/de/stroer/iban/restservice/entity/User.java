@@ -1,16 +1,35 @@
 package de.stroer.iban.restservice.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
 
+    private static final int CascadeT = 0;
     @Id
+    @GeneratedValue
+    private Long id;
     private String username;
     private String password;
-    private String name;
-    private String email;
+    private String firstname;
+    private String lastname;
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<IBAN> IBAN = new ArrayList<IBAN>();
+
+    public Long getId() {
+	return id;
+    }
+
+    public void setId(Long id) {
+	this.id = id;
+    }
 
     public String getUsername() {
 	return username;
@@ -28,25 +47,28 @@ public class User {
 	this.password = password;
     }
 
-    public String getName() {
-	return name;
+    public String getFirstname() {
+	return firstname;
     }
 
-    public void setName(String name) {
-	this.name = name;
+    public void setFirstname(String firstname) {
+	this.firstname = firstname;
     }
 
-    public String getEmail() {
-	return email;
+    public String getLastname() {
+	return lastname;
     }
 
-    public void setEmail(String email) {
-	this.email = email;
+    public void setLastname(String lastname) {
+	this.lastname = lastname;
     }
 
-    @Override
-    public String toString() {
-	return "User{" + "username='" + username + '\'' + ", password='" + password + '\'' + ", name='" + name + '\''
-		+ ", email='" + email + '\'' + '}';
+    public List<IBAN> getIBAN() {
+	return IBAN;
     }
+
+    public void setIBAN(List<IBAN> iBAN) {
+	IBAN = iBAN;
+    }
+
 }
