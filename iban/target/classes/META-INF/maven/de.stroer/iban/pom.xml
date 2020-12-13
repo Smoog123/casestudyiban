@@ -47,6 +47,12 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>        
+        
+        <!-- Spring Security -->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
     </dependencies>
 
     <!-- Spring Boot Maven Plugin -->
