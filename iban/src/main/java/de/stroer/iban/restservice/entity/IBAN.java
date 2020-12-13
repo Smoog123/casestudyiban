@@ -1,4 +1,4 @@
-package de.sroer.iban.restservice.entity;
+package de.stroer.iban.restservice.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
